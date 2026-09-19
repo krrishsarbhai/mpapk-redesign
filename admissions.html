@@ -1,0 +1,181 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admissions | MPAPK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        .page-header { background: var(--primary); color: white; padding: 4rem 1.5rem; text-align: center; }
+        .content-container { max-width: 900px; margin: 4rem auto; padding: 2rem 1.5rem; background: white; border-radius: var(--radius); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); border: 1px solid var(--border-color); }
+        .content-section { padding: 2rem 0; border-bottom: 1px solid var(--border-color); max-width: 800px; margin: auto;}
+        .content-section:last-child { border-bottom: none; padding-bottom: 0; }
+        .content-section h2 { color: var(--primary); margin-bottom: 1.5rem; font-size: 1.75rem; }
+        .content-section p { margin-bottom: 1rem; color: var(--text-muted); line-height: 1.8; }
+        
+        /* Admission Table Styles */
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+        .styled-table th, .styled-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
+        .styled-table th { background-color: var(--bg-light); color: var(--primary); font-weight: 600; }
+        
+        .contact-card { background: var(--bg-light); padding: 1.5rem; border-radius: var(--radius); margin-top: 1.5rem; border-left: 4px solid var(--accent); }
+        
+        /* Updated Banner Image Style */
+        .banner-img { 
+        width: 100%; 
+        max-width: 500px; /* Prevents the image from getting too large */
+        height: auto; 
+        display: block; 
+        margin: 0 auto 2rem auto; /* Centers the image and adds space below it */
+        border-radius: 8px; /* Adds rounded corners */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a soft shadow to make it pop */
+        }
+    </style>
+    </head>
+    <body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+        <div class="logo-wrapper">
+            <a href="index.html">
+            <img src="assets/images/logo.png" alt="MPAPK Logo" class="nav-logo" onerror="this.style.display='none'">
+            </a>
+            <a href="index.html" class="logo">Jagrut Apang Sanghatana <br><span>MPAPK</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="index.html#courses">Courses</a></li>
+            <li><a href="index.html#team">Leadership</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="donate.html" class="btn btn-primary">Donate Us</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Admissions 2026-27</h1>
+        <p style="color: #cbd5e1; margin-top: 1rem;">Free Vocational Training & Residential Facilities</p>
+    </header>
+
+    <main class="content-container">
+        <!-- Original Marathi Flyer Banner -->
+        <img src="assets/images/admission-banner.jpg" alt="Admission Notice in Marathi" class="banner-img" onerror="this.style.display='none'">
+
+        <section class="content-section">
+        <h2>Free Admission Details</h2>
+        <p>The admission process is now open for the academic year 2026-27. We offer completely free vocational training recognized by the Maharashtra State Skill, Vocational Education and Training Board. Free accommodation and meals will also be provided to the students.</p>
+        
+        <p><strong>Eligibility:</strong> Students with 40% or more disability, as well as students in the 15 to 35 age group.</p>
+        
+        <table class="styled-table">
+            <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Duration</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Certificate Course in Electronics, Television, Radio, Audio & Mobile Repairing</td>
+                <td>1 Year</td>
+            </tr>
+            <tr>
+                <td>Certificate Course in Computer Software / Basic Hardware</td>
+                <td>1 Year</td>
+            </tr>
+            <tr>
+                <td>Certificate Course in Tailoring & Cutting</td>
+                <td>1 Year</td>
+            </tr>
+            <tr>
+                <td>Spoken English / Skill Development / Personality Development / Physiotherapy / JAVA / Tally Accounting</td>
+                <td>Part Time</td>
+            </tr>
+            </tbody>
+        </table>
+        </section>
+
+        <section class="content-section">
+        <h2>Contact for Admission</h2>
+        <p>Interested students and parents should contact the following numbers to confirm their admission today:</p>
+        <div class="contact-card">
+            <p><strong>Headmaster Mr. Jagtap:</strong> 9822010510</p>
+            <p><strong>Mr. Toke Sir:</strong> 8087612654</p>
+            <p><strong>Mr. Kate Sir:</strong> 9322952539</p>
+            <p style="margin-top: 1rem;"><strong>Email:</strong> maan.mpapk@gmail.com</p>
+            <p><strong>Address:</strong> Hinjewadi - Maan IT Park, Pune - 411057</p>
+        </div>
+        </section>
+    </main>
+
+    <!-- Universal Footer -->
+    <footer class="site-footer" id="contact" style="background-color: #1e293b; color: #cbd5e1; padding: 4rem 1.5rem 2rem; margin-top: 4rem;">
+        <div style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; border-bottom: 1px solid #334155; padding-bottom: 2rem;">
+        
+        <!-- Column 1: Address & Hours -->
+        <div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">MPAPK Pune</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            Near Hinjewadi Infotech Park, Maan, Pune,<br>
+            Maharashtra – 411057 (India)
+            </p>
+            <p style="font-size: 0.95rem; line-height: 1.6;">
+            Hours: Mon – Sat: 10:00AM–6:00PM<br>
+            Sunday: Closed
+            </p>
+        </div>
+
+        <!-- Column 2: Direct Contact Details -->
+        <div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Contact Us</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+            <strong>Mr. Ganesh Jagtap - Principal</strong><br>
+            +91-9822010510 / +91-9822010582
+            </p>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            <strong>Mr. Arun Toke - Instructor</strong><br>
+            +91-8087612654
+            </p>
+            <p style="font-size: 0.95rem; line-height: 1.6;">
+            <a href="mailto:maan.mpapk@gmail.com" style="color: #60a5fa; text-decoration: none;">maan.mpapk@gmail.com</a>
+            </p>
+        </div>
+
+        <!-- Column 3: Map Embed -->
+        <div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Find Us</h3>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1643868697116!2d73.7145!3d18.5665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMzJzU5LjQiTiA3M8KwNDInNTIuMiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="180" 
+            style="border:0; border-radius: 8px;" 
+            allowfullscreen="" 
+            loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Column 4: Support the Mission -->
+        <div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Support the Mission</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            We empower passed trainees with equipment like sewing machines and toolkits to make them self-sufficient.
+            </p>
+            <a href="donate.html" class="btn btn-primary" style="background-color: #f59e0b; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block;">Donate Us</a>
+        </div>
+
+        </div>
+        
+        <div style="max-width: 1200px; margin: auto; text-align: center; padding-top: 1.5rem; font-size: 0.85rem;">
+        &copy; 2026 Mahatma Phule Apang Prashikshan Kendra
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    </body>
+    </html>

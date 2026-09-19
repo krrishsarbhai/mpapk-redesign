@@ -1,0 +1,186 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery | MPAPK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        .page-header { background: var(--primary); color: white; padding: 4rem 1.5rem; text-align: center; }
+        
+        /* CSS Grid for the Gallery */
+        .gallery-container {
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 0 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        }
+        
+        .gallery-item {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Lightbox (Modal) Styles */
+        .lightbox {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-color: rgba(15, 23, 42, 0.9); /* Dark overlay */
+        align-items: center;
+        justify-content: center;
+        }
+        
+        .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        
+        .close-lightbox {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        }
+    </style>
+    </head>
+    <body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="nav-container">
+    <div class="logo-wrapper">
+            <a href="index.html">
+            <img src="assets/images/logo.png" alt="MPAPK Logo" class="nav-logo" onerror="this.style.display='none'">
+            </a>
+            <a href="index.html" class="logo">Jagrut Apang Sanghatana <br><span>MPAPK</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="index.html#courses">Courses</a></li>
+            <li><a href="index.html#team">Leadership</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="donate.html" class="btn btn-primary">Donate Us</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Photo Gallery</h1>
+        <p style="color: #cbd5e1; margin-top: 1rem;">Glimpses of our campus, facilities, and activities.</p>
+    </header>
+
+    <!-- Gallery Grid -->
+    <main class="gallery-container">
+        <img src="assets/images/gallery1.jpg" alt="Gallery Image 1" class="gallery-item" onclick="openLightbox(this)" onerror="this.style.display='none'">
+        <img src="assets/images/gallery2.jpg" alt="Gallery Image 2" class="gallery-item" onclick="openLightbox(this)" onerror="this.style.display='none'">
+        <img src="assets/images/gallery3.jpg" alt="Gallery Image 3" class="gallery-item" onclick="openLightbox(this)" onerror="this.style.display='none'">
+        <img src="assets/images/gallery4.jpg" alt="Gallery Image 4" class="gallery-item" onclick="openLightbox(this)" onerror="this.style.display='none'">
+        <img src="assets/images/gallery5.jpg" alt="Gallery Image 5" class="gallery-item" onclick="openLightbox(this)" onerror="this.style.display='none'">
+        <img src="assets/images/gallery6.jpg" alt="Gallery Image 6" class="gallery-item" onclick="openLightbox(this)" onerror="this.style.display='none'">
+        <img src="assets/images/gallery7.jpg" alt="Gallery Image 7" class="gallery-item" onclick="openLightbox(this)" onerror="this.style.display='none'">
+        <img src="assets/images/gallery8.jpg" alt="Gallery Image 8" class="gallery-item" onclick="openLightbox(this)" onerror="this.style.display='none'">
+    </main>
+
+    <!-- The Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        // Simple JavaScript for the Lightbox effect
+        function openLightbox(element) {
+        document.getElementById('lightbox').style.display = 'flex';
+        document.getElementById('lightbox-img').src = element.src;
+        }
+
+        function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+
+    <!-- Universal Footer -->
+    <footer class="site-footer" id="contact" style="background-color: #1e293b; color: #cbd5e1; padding: 4rem 1.5rem 2rem; margin-top: 4rem;">
+        <div style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; border-bottom: 1px solid #334155; padding-bottom: 2rem;">
+        
+        <!-- Column 1: Address & Hours -->
+        <div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">MPAPK Pune</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            Near Hinjewadi Infotech Park, Maan, Pune,<br>
+            Maharashtra – 411057 (India)
+            </p>
+            <p style="font-size: 0.95rem; line-height: 1.6;">
+            Hours: Mon – Sat: 10:00AM–6:00PM<br>
+            Sunday: Closed
+            </p>
+        </div>
+
+        <!-- Column 2: Direct Contact Details -->
+        <div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Contact Us</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+            <strong>Mr. Ganesh Jagtap - Principal</strong><br>
+            +91-9822010510 / +91-9822010582
+            </p>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            <strong>Mr. Arun Toke - Instructor</strong><br>
+            +91-8087612654
+            </p>
+            <p style="font-size: 0.95rem; line-height: 1.6;">
+            <a href="mailto:maan.mpapk@gmail.com" style="color: #60a5fa; text-decoration: none;">maan.mpapk@gmail.com</a>
+            </p>
+        </div>
+
+        <!-- Column 3: Map Embed -->
+        <div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Find Us</h3>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1643868697116!2d73.7145!3d18.5665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMzJzU5LjQiTiA3M8KwNDInNTIuMiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="180" 
+            style="border:0; border-radius: 8px;" 
+            allowfullscreen="" 
+            loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Column 4: Support the Mission -->
+        <div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Support the Mission</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            We empower passed trainees with equipment like sewing machines and toolkits to make them self-sufficient.
+            </p>
+            <a href="donate.html" class="btn btn-primary" style="background-color: #f59e0b; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block;">Donate Us</a>
+        </div>
+
+        </div>
+        
+        <div style="max-width: 1200px; margin: auto; text-align: center; padding-top: 1.5rem; font-size: 0.85rem;">
+        &copy; 2026 Mahatma Phule Apang Prashikshan Kendra.
+        </div>
+    </footer>
+    </body>
+    </html>
